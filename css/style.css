@@ -1,0 +1,438 @@
+:root{
+  --main-font: "Roboto","Arial",sans-serif;
+  --bg-color:#fff;
+  --primary-color:#EA625C;
+  --primary-color-hover:  #C9514C;
+  --text-color-white:#fff;
+  --black-color: #333333;
+  --text-grey-color:#777777;
+  --margin-most-text: 30px;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src:
+  url("../fonts/Roboto-Bold.woff2") format("woff2"),
+  url("../fonts/Roboto-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src:
+  url("../fonts/Roboto-Regular.woff2") format("woff2"),
+  url("../fonts/Roboto-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1040px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family:var(--main-font);
+}
+
+/* mostly used styles */
+.section-heading {
+  margin-top: 0;
+  margin-bottom: var(--margin-most-text);
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 120%;
+  color: #000000;
+}
+
+.section-text {
+  padding-left: 40px;
+  font-size: 16px;
+  line-height: 150%;
+  border-left: 3px solid transparent;
+  margin-bottom: var(--margin-most-text);
+}
+
+.section-link {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+  line-height: 150%;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: var(--primary-color);
+  color: var(--text-color-white);
+  transition: background-color 0.3s ease, color 0.3s ease, opacity 0.3s ease;
+}
+
+
+.section-link:hover {
+  background-color: var(--primary-color-hover);
+}
+
+
+.section-link:active {
+  opacity: 0.8;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(141, 138, 138, 0.4);
+}
+
+/* SITE-HEADER */
+.site-header {
+  background-color: var(--bg-color);
+  padding-top:30px ;
+  padding-bottom: 55px;
+
+}
+
+.site-header-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LOGO */
+
+.logo-img {
+  display: block;
+  transition: opacity 0.4s ease;
+}
+
+.logo-img:hover{
+  opacity: 0.8;
+}
+
+.logo-img:active{
+  opacity: 0.6;
+}
+
+
+/* NAVBAR */
+
+.sitenav {
+  display: flex;
+  align-items: center;
+}
+
+.sitenav-list {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+
+}
+
+.sitenav-item {
+  margin-right: 30px;
+}
+
+.sitenav-link {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-weight: normal;
+  font-size: 15px;
+  color: var(--black-color);
+  line-height: 150%;
+  padding-bottom: 5px;
+  border-bottom:  3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.sitenav-link:hover{
+  border-color:var(--black-color);
+}
+
+.sitenav-link:active{
+  opacity: 0.6;
+}
+
+.form-help{
+  margin-right: 0;
+}
+
+.input-help{
+  border: none;
+  width: 160px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--black-color);
+  font-size: 15px;
+  line-height: 150%;
+  color: #666;
+}
+.input-help:focus{
+  outline: none;
+}
+
+
+/* SITE-CONTENT */
+.site-content {
+  flex-grow: 1;
+}
+/* HERO SECTION */
+.hero{
+  padding-top: 100px;
+  padding-bottom: 185px;
+  background-color: var(--bg-color);
+  background-image: url("../img/intro-bg.png");
+  background-repeat: no-repeat;
+  background-position: calc(50% + 650px) 0;
+  background-size: contain;
+  border-bottom: 1px solid #ddd;
+}
+.hero-container {
+  display: flex;
+
+}
+
+
+.hero-description {
+  width: 490px;
+  /* margin-right: auto; */
+}
+
+
+
+.hero-info {
+
+  color: var(--text-grey-color);
+  border-color: var(--text-grey-color);
+
+}
+
+.hero-link {
+  padding: 12px 39px;
+}
+
+/* line */
+.line{
+  background-color:#DDDDDD;
+}
+
+/*    FEATURES SECTION*/
+
+.features{
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background-color: var(--bg-color);
+
+}
+
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  /* align-items: center; */
+}
+
+.features-item {
+  width: 280px;
+  margin-right: 80px;
+
+}
+
+.features-item:nth-child(3){
+  margin-right: 0;
+}
+.features-item-heading {
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 150%;
+  text-transform: uppercase;
+  color: #222222;
+}
+
+.features-item-info {
+  margin-bottom: 20px;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 160%;
+  color: var(--black-color);
+}
+
+.mini-boxes {
+
+  display: flex;
+}
+
+.dots-divider {
+  width: 8px;
+  height: 8px;
+  background-color: #ddd;
+  margin-right: 10px;
+}
+
+.feature-item-link{
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: 160%;
+  color: var(--primary-color);
+}
+
+.feature-item-link::before{
+  width: 40px;
+  height: 2px;
+  margin-right: 10px;
+  content: '';
+  background-color: var(--primary-color);
+  display: block;
+  transition: width 0.3s ease;
+
+}
+.link-hovering:hover .feature-item-link::before {
+  width: 60px;
+}
+
+/* sectino nike */
+
+.nike {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background-color: var(--bg-color);
+}
+
+.nike-continaer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nike-descreption {
+  width: 490px;
+
+}
+
+
+.nike-info {
+  padding-left: 40px;
+  margin-bottom: 30px;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--text-grey-color);
+  border-left: 3px solid var(--text-grey-color);
+}
+
+.nike-link {
+  text-decoration: none;
+  padding: 12px 90px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 150%;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--text-color-white);
+  background-color:var(--primary-color);
+
+
+}
+
+.nike-img {
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+/* RUNNER SECTION */
+
+.runner {
+  padding-top: 240px;
+  padding-bottom: 240px;
+  background-image: url("../img/runners.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.runner-container {
+  color: var(--text-color-white);
+  display: flex;
+}
+
+.runner-description {
+  width: 490px;
+  margin-left: auto;
+}
+
+.runner-heading {
+  color: #FFFFFF;
+
+}
+
+.runner-info {
+  border-left: 3px solid var(--text-color-white);
+  color: var(--text-color-white);
+}
+
+.runner-link {
+  display: inline-block;
+  padding: 12px 46px;
+
+}
